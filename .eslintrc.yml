@@ -1,0 +1,30 @@
+env:
+  browser: true
+  es6: true
+  node: true
+extends:
+  - standard
+  - plugin:flowtype/recommended
+plugins:
+  - import
+  - flowtype
+parser: babel-eslint
+parserOptions:
+  sourceType: module
+rules:
+  indent:
+    - error
+    - 2
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
+  no-unused-vars: warn
+  flowtype/require-valid-file-annotation:
+    - error
+    - always

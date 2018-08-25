@@ -1,0 +1,33 @@
+{
+  "name": "flow-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel  ./src -d ./build",
+    "start": " npm run build && node build/app.js",
+    "dev": "concurrently \"npm run build -- --watch\" \"nodemon build/app.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-flow": "^6.23.0",
+    "concurrently": "^4.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "flow-bin": "^0.79.1",
+    "flow-remove-types": "^1.2.3",
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {}
+}
